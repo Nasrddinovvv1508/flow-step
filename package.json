@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "tsc && cp -r public/* dist/"
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
