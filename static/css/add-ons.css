@@ -268,3 +268,117 @@ body {
         box-shadow: 0 0 0 var(--😀😀😀);
     }
 }
+
+/* add ons */
+.add_ons_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.active_add_ons {
+    background-color: #e9ebfc;
+}
+
+.add_ons_basic {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px 20px;
+    justify-content: space-between;
+    border: 2px solid #D6D9E6;
+    border-radius: 8px;
+    transition: all 0.3s;
+
+    &:hover {
+        border-color: #483EFF;
+        cursor: pointer;
+    }
+
+    h4 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: right;
+        color: #483EFF;
+    }
+}
+
+.add_ons_basic .basic_right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.38px;
+        color: #022959;
+        margin-bottom: 7px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #9699AA;
+    }
+}
+
+/* input checkbox */
+.input-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.input-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    border: 2px solid #414141;
+    border-radius: 5px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.input-container input:hover~.checkmark {
+    border: 2px solid #0974f1;
+}
+
+.input-container input:checked~.checkmark {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border: 2px solid #0974f1;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.input-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.input-container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid black;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}

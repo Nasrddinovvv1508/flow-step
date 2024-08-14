@@ -73,9 +73,56 @@
                 </p>
             </div>
 
+            <div class="add_ons_container">
+                <label for="check" class="add_ons_basic">
+                    <div class="basic_right">
+                        <label class="input-container">
+                            <input id="check" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>
+                        <div>
+                            <h3>Online service</h3>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                    </div>
+
+                    <h4>+$1/mo</h4>
+                </label>
+
+                <label for="check2" class="add_ons_basic">
+                    <div class="basic_right">
+                        <label class="input-container">
+                            <input id="check2" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>
+                        <div>
+                            <h3>Online service</h3>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                    </div>
+
+                    <h4>+$1/mo</h4>
+                </label>
+
+                <label for="check3" class="add_ons_basic">
+                    <div class="basic_right">
+                        <label class="input-container">
+                            <input id="check3" type="checkbox">
+                            <div class="checkmark"></div>
+                        </label>
+                        <div>
+                            <h3>Online service</h3>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                    </div>
+
+                    <h4>+$1/mo</h4>
+                </label>
+            </div>
+
             <div class="basic_buttons">
-                <a class="go_back" href="/">Go Back</a>
-                <a href="./add-ons.html">
+                <a class="go_back" href="./plan.html">Go Back</a>
+                <a href="./summary.html">
                     <button class="button">
                         Next Step
                     </button>
@@ -84,7 +131,36 @@
         </section>
     </main>
 
-    <!-- <script src="./dist/app.js"></script> -->
+    <script>
+        let check = document.getElementById(`check`)
+        let check2 = document.getElementById(`check2`)
+        let check3 = document.getElementById(`check3`)
+
+        check && check.addEventListener(`input`, () => {
+            if (!check.parentElement.parentElement.parentElement.classList.contains(`active_add_ons`)) {
+                check.parentElement.parentElement.parentElement.classList.add(`active_add_ons`)
+            } else {
+                check.parentElement.parentElement.parentElement.classList.remove(`active_add_ons`)
+            }
+        })
+
+        check2 && check2.addEventListener(`input`, () => {
+            if (!check2.parentElement.parentElement.parentElement.classList.contains(`active_add_ons`)) {
+                check2.parentElement.parentElement.parentElement.classList.add(`active_add_ons`)
+            } else {
+                check2.parentElement.parentElement.parentElement.classList.remove(`active_add_ons`)
+            }
+        })
+
+        check3 && check3.addEventListener(`input`, () => {
+            if (!check3.parentElement.parentElement.parentElement.classList.contains(`active_add_ons`)) {
+                check3.parentElement.parentElement.parentElement.classList.add(`active_add_ons`)
+            } else {
+                check3.parentElement.parentElement.parentElement.classList.remove(`active_add_ons`)
+            }
+        })
+
+    </script>
 </body>
 
 </html>
